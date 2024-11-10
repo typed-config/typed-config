@@ -1,6 +1,6 @@
 {
     "name": "@typed-config-js/type-utils",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "scripts": {
         "build:types": "with-env 'tsc --project tsconfig.types.json'",
         "build": "bun run build:types",

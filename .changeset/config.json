@@ -3,16 +3,8 @@
     "changelog": "@changesets/cli/changelog",
     "commit": false,
     "fixed": [],
-    "linked": [
-        [
-            "@typed-config-js/core",
-            "@typed-config-js/valibot-adapter",
-            "@typed-config-js/type-utils",
-            "@typed-config-js/utils"
-        ]
-    ],
+    "linked": [["@typed-config-js/*"]],
     "access": "restricted",
     "baseBranch": "main",
-    "updateInternalDependencies": "patch",
-    "ignore": ["@repo/biome-config", "@repo/tsconfig"]
+    "updateInternalDependencies": "patch"
 }

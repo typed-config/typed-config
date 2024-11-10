@@ -1,6 +1,6 @@
 {
     "name": "@typed-config-js/core",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "scripts": {
         "test:unit": "with-env 'vitest run --config vitest.config.unit.ts'",
         "test:coverage": "with-env 'vitest run --coverage'",
@@ -11,9 +11,7 @@
         "build:js": "with-env 'vite build'",
         "build:types": "with-env 'tsc --project tsconfig.types.json'",
         "build": "bun run build:js && bun run build:types",
-        "publish": "with-env 'bun publish --access public'",
-        "changeset": "with-env 'bunx changeset add'",
-        "version": "with-env 'bunx changeset version'"
+        "publish": "with-env 'bun publish --access public'"
     },
     "exports": {
         ".": {

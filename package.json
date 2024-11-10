@@ -2,7 +2,10 @@
     "name": "@repo/root",
     "version": "0.0.0-semantically-released",
     "scripts": {
-        "test": "vitest run"
+        "test": "vitest run",
+        "changeset": "with-env 'bunx changeset add'",
+        "version": "with-env 'bunx changeset version'",
+        "publish": "with-env 'bunx changeset publish'"
     },
     "dependencies": {
         "@rencedm112/with-env": "^0.0.39",

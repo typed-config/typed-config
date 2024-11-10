@@ -1,6 +1,6 @@
 {
     "name": "@typed-config-js/valibot-adapter",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "exports": {
         ".": {
             "import": "./dist/index.es.js",
