@@ -28,7 +28,7 @@ function adaptResult<
     };
 }
 
-export function valibotAdapter<
+export function valibotValidator<
     TSchema extends BaseSchema<unknown, unknown, BaseIssue<unknown>>,
     TAsync extends boolean = false,
 >(schema: TSchema): SchemaValidator<v.InferOutput<TSchema>, TAsync> {

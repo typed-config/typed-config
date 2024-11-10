@@ -31,6 +31,26 @@
         "clean": {
             "cache": false
         },
+        "test": {
+            "inputs": ["./src/*"],
+            "dependsOn": ["^test"]
+        },
+        "test:unit": {
+            "inputs": ["./src/*"],
+            "dependsOn": ["^test:unit"]
+        },
+        "test:integration": {
+            "inputs": ["./src/*"],
+            "dependsOn": ["^test:integration"]
+        },
+        "test:e2e": {
+            "inputs": ["./src/*"],
+            "dependsOn": ["^test:e2e"]
+        },
+        "test:ui": {
+            "inputs": ["./src/*"],
+            "dependsOn": ["^test:e2e"]
+        },
         "dev": {
             "persistent": true,
             "cache": false,

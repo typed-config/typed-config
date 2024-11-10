@@ -1,6 +1,6 @@
 {
-    "name": "@repo/utils",
-    "version": "0.0.0-semantically-released",
+    "name": "@typed-config-js/type-utils",
+    "version": "0.0.1",
     "exports": {
         ".": "./src/index.ts"
     },
