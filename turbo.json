@@ -29,7 +29,7 @@
             "inputs": ["./src/*"]
         },
         "publish": {
-            "dependsOn": ["^publish", "build"],
+            "dependsOn": ["build"],
             "inputs": ["./src/*"]
         },
         "clean": {
