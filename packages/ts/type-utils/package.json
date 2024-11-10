@@ -3,7 +3,8 @@
     "version": "0.0.1",
     "scripts": {
         "build:types": "with-env 'tsc --project tsconfig.types.json'",
-        "build": "bun run build:types"
+        "build": "bun run build:types",
+        "publish": "bun publish --access public"
     },
     "exports": {
         ".": {

@@ -28,6 +28,10 @@
         "codegen": {
             "inputs": ["./src/*"]
         },
+        "publish": {
+            "dependsOn": ["^publish", "build"],
+            "inputs": ["./src/*"]
+        },
         "clean": {
             "cache": false
         },

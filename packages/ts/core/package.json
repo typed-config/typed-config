@@ -10,7 +10,8 @@
         "check": "bun run check:lint && bun run check:format",
         "build:js": "with-env 'vite build'",
         "build:types": "with-env 'tsc --project tsconfig.types.json'",
-        "build": "bun run build:js && bun run build:types"
+        "build": "bun run build:js && bun run build:types",
+        "publish": "bun publish --access public"
     },
     "exports": {
         ".": {
@@ -22,7 +23,7 @@
         }
     },
     "devDependencies": {
-        "@repo/type-utils": "workspace:*",
+        "@typed-config-js/type-utils": "workspace:*",
         "@repo/tsconfig": "workspace:*"
     }
 }
