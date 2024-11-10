@@ -2,7 +2,8 @@
     "$schema": "https://unpkg.com/@changesets/config@3.0.3/schema.json",
     "changelog": "@changesets/cli/changelog",
     "commit": false,
-    "fixed": [
+    "fixed": [],
+    "linked": [
         [
             "@typed-config-js/core",
             "@typed-config-js/valibot-adapter",
@@ -10,9 +11,8 @@
             "@typed-config-js/utils"
         ]
     ],
-    "linked": [],
     "access": "restricted",
     "baseBranch": "main",
     "updateInternalDependencies": "patch",
-    "ignore": []
+    "ignore": ["@repo/biome-config", "@repo/tsconfig"]
 }

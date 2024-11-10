@@ -11,7 +11,9 @@
         "build:js": "with-env 'vite build'",
         "build:types": "with-env 'tsc --project tsconfig.types.json'",
         "build": "bun run build:js && bun run build:types",
-        "publish": "bun publish --access public"
+        "publish": "with-env 'bun publish --access public'",
+        "changeset": "with-env 'bunx changeset add'",
+        "version": "with-env 'bunx changeset version'"
     },
     "exports": {
         ".": {
