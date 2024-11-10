@@ -1,6 +1,12 @@
 {
     "name": "@typed-config-js/type-utils",
     "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "url": "https://github.com/typed-config/typed-config"
+    },
     "scripts": {
         "build:types": "with-env 'tsc --project tsconfig.types.json'",
         "build": "bun run build:types",
