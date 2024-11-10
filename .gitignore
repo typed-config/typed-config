@@ -1,0 +1,49 @@
+# Build artifacts
+target
+dist
+build
+.solid
+.next
+.sveltekit
+.output
+.vercel
+.netlify
+netlify
+
+# dependencies
+node_modules
+
+# IDEs and editors
+.idea
+.project
+.classpath
+*.launch
+.settings/
+
+# Temp
+gitignore
+
+# Local Env files
+.env*
+
+# Example Env files
+!.env*example
+
+# Tfvars
+*.tfvars
+*.tfvars.json
+
+# Turborepo artifacts
+.turbo
+
+
+# System Files
+.DS_Store
+Thumbs.db
+# moon
+.moon/cache
+.moon/docker
+
+
+# Local connection files
+graphql.config.json

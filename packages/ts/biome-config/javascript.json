@@ -1,0 +1,16 @@
+{
+    "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+    "javascript": {
+        "formatter": {
+            "arrowParentheses": "always",
+            "attributePosition": "auto",
+            "jsxQuoteStyle": "double",
+            "quoteStyle": "double",
+            "bracketSameLine": false,
+            "trailingCommas": "all",
+            "semicolons": "always",
+            "enabled": true,
+            "quoteProperties": "asNeeded"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "ui": "tui",
+    "tasks": {
+        "check": {
+            "dependsOn": ["^check"]
+        },
+        "build": {
+            "dependsOn": ["^build", "codegen"],
+            "inputs": ["./src/*"],
+            "outputs": [
+                "./dist/*",
+                "./bin/*",
+                "./output/*",
+                "./build/*",
+                "./obj/*"
+            ]
+        },
+        "codegen": {
+            "inputs": ["./src/*"]
+        },
+        "cleanup": {},
+        "schema:apply": {
+            "inputs": ["./schemas/*", "./atlas.hcl"],
+            "env": ["DATABASE_URL", "MIGRATION_DEV_DATABASE_URL"],
+            "cache": false
+        },
+        "schema:clean": {
+            "cache": false
+        },
+        "dev": {
+            "persistent": true,
+            "cache": false,
+            "interactive": true
+        }
+    }
+}

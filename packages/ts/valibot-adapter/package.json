@@ -1,0 +1,15 @@
+{
+    "name": "@typed-config-js/valibot-adapter",
+    "version": "0.0.0-semantically-released",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "devDependencies": {
+        "@repo/type-utils": "workspace:*",
+        "@repo/tsconfig": "workspace:*"
+    },
+    "peerDependencies": {
+        "valibot": "^0.39.0",
+        "@typed-config-js/core": "workspace:*"
+    }
+}
