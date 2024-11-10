@@ -1,0 +1,9 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig.json",
+    "extends": ["@repo/tsconfig/js-output.json"],
+    "compilerOptions": {
+        "emitDeclarationOnly": true,
+        "declaration": true,
+        "declarationDir": "${configDir}/dist"
+    }
+}

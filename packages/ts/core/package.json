@@ -3,10 +3,23 @@
     "version": "0.0.0-semantically-released",
     "scripts": {
         "test:unit": "with-env 'vitest run --config vitest.config.unit.ts'",
-        "test:coverage": "with-env 'vitest run --coverage'"
+        "test:coverage": "with-env 'vitest run --coverage'",
+        "test": "bun run test:unit && bun run test:coverage",
+        "check:lint": "with-env 'biome lint'",
+        "check:format": "with-env 'biome format'",
+        "check": "bun run check:lint && bun run check:format",
+        "build:js": "with-env 'vite build'",
+        "build:types": "with-env 'tsc --project tsconfig.types.json'",
+        "build": "bun run build:js && bun run build:types"
     },
     "exports": {
-        ".": "./src/index.ts"
+        ".": {
+            "import": "./dist/index.es.js",
+            "require": "./dist/index.cjs.js",
+            "types": "./dist/index.d.ts",
+            "node": "./dist/index.es.js",
+            "default": "./dist/index.es.js"
+        }
     },
     "devDependencies": {
         "@repo/type-utils": "workspace:*",

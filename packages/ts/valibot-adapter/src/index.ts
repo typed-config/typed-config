@@ -2,8 +2,6 @@ import type { BaseIssue, BaseSchema, SafeParseResult } from "valibot";
 import type { SchemaValidator } from "@typed-config-js/core";
 import * as v from "valibot";
 
-export { safeParse } from "valibot";
-
 function adaptResult<
     TSchema extends BaseSchema<unknown, unknown, BaseIssue<unknown>>,
 >(result: SafeParseResult<TSchema>) {

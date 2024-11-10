@@ -2,7 +2,18 @@
     "name": "@typed-config-js/valibot-adapter",
     "version": "0.0.0-semantically-released",
     "exports": {
-        ".": "./src/index.ts"
+        ".": {
+            "import": "./dist/index.es.js",
+            "require": "./dist/index.cjs.js",
+            "types": "./dist/index.d.ts",
+            "node": "./dist/index.es.js",
+            "default": "./dist/index.es.js"
+        }
+    },
+    "scripts": {
+        "build:js": "with-env 'vite build'",
+        "build:types": "with-env 'tsc --project tsconfig.types.json'",
+        "build": "bun run build:js && bun run build:types"
     },
     "devDependencies": {
         "@repo/type-utils": "workspace:*",

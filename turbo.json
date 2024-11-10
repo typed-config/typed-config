@@ -3,7 +3,16 @@
     "ui": "tui",
     "tasks": {
         "check": {
-            "dependsOn": ["^check"]
+            "dependsOn": ["^check"],
+            "inputs": ["./src/*"]
+        },
+        "check:lint": {
+            "dependsOn": ["^check:lint"],
+            "inputs": ["./src/*"]
+        },
+        "check:format": {
+            "dependsOn": ["^check:format"],
+            "inputs": ["./src/*"]
         },
         "build": {
             "dependsOn": ["^build", "codegen"],
@@ -19,13 +28,7 @@
         "codegen": {
             "inputs": ["./src/*"]
         },
-        "cleanup": {},
-        "schema:apply": {
-            "inputs": ["./schemas/*", "./atlas.hcl"],
-            "env": ["DATABASE_URL", "MIGRATION_DEV_DATABASE_URL"],
-            "cache": false
-        },
-        "schema:clean": {
+        "clean": {
             "cache": false
         },
         "dev": {

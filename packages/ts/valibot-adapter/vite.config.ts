@@ -1,3 +1,17 @@
 import type { UserConfig } from "vite";
 
-export default {} satisfies UserConfig;
+export default {
+    build: {
+        lib: {
+            name: "TypedConfigValibot",
+            entry: "./src/index.ts",
+            formats: ["es", "cjs", "umd", "iife", "system"],
+            fileName: (format, file) => {
+                return `${file}.${format}.js`;
+            },
+        },
+        rollupOptions: {
+            external: ["valibot", "@typed-config-js/core"],
+        },
+    },
+} satisfies UserConfig;

@@ -1,8 +1,14 @@
 {
     "name": "@repo/type-utils",
     "version": "0.0.0-semantically-released",
+    "scripts": {
+        "build:types": "with-env 'tsc --project tsconfig.types.json'",
+        "build": "bun run build:types"
+    },
     "exports": {
-        ".": "./src/index.ts"
+        ".": {
+            "types": "./dist/index.d.ts"
+        }
     },
     "devDependencies": {
         "@repo/tsconfig": "workspace:*"
