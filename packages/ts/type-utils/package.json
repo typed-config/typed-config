@@ -1,6 +1,6 @@
 {
     "name": "@typed-config-js/type-utils",
-    "version": "1.0.0",
+    "version": "2.0.1",
     "publishConfig": {
         "access": "public"
     },
@@ -8,9 +8,13 @@
         "url": "https://github.com/typed-config/typed-config"
     },
     "scripts": {
+        "check:lint": "with-env 'biome lint'",
+        "check:format": "with-env 'biome format'",
+        "check": "bun run check:lint && bun run check:format",
+        "build:js": "with-env 'vite build'",
         "build:types": "with-env 'tsc --project tsconfig.types.json'",
-        "build": "bun run build:types",
-        "publish": "bun publish --access public"
+        "build": "bun run build:js && bun run build:types",
+        "publish": "with-env 'bun publish --access public'"
     },
     "exports": {
         ".": {

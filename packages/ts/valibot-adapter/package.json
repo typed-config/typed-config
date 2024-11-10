@@ -1,6 +1,6 @@
 {
     "name": "@typed-config-js/valibot-adapter",
-    "version": "1.0.0",
+    "version": "2.0.2",
     "publishConfig": {
         "access": "public"
     },
@@ -17,10 +17,13 @@
         }
     },
     "scripts": {
+        "check:lint": "with-env 'biome lint'",
+        "check:format": "with-env 'biome format'",
+        "check": "bun run check:lint && bun run check:format",
         "build:js": "with-env 'vite build'",
         "build:types": "with-env 'tsc --project tsconfig.types.json'",
         "build": "bun run build:js && bun run build:types",
-        "publish": "bun publish --access public"
+        "publish": "with-env 'bun publish --access public'"
     },
     "devDependencies": {
         "@typed-config-js/type-utils": "workspace:*",

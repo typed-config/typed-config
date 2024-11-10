@@ -4,8 +4,7 @@
     "scripts": {
         "test": "vitest run",
         "changeset": "with-env 'bunx changeset add'",
-        "version": "with-env 'bunx changeset version'",
-        "publish": "with-env 'turbo build' && with-env 'bunx changeset publish --access public'"
+        "version": "with-env 'bunx changeset version'"
     },
     "dependencies": {
         "@rencedm112/with-env": "^0.0.39",

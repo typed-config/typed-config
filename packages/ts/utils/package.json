@@ -1,6 +1,6 @@
 {
     "name": "@typed-config-js/utils",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "publishConfig": {
         "access": "public"
     },
@@ -8,9 +8,6 @@
         "url": "https://github.com/typed-config/typed-config"
     },
     "scripts": {
-        "test:unit": "with-env 'vitest run --config vitest.config.unit.ts'",
-        "test:coverage": "with-env 'vitest run --coverage'",
-        "test": "bun run test:unit && bun run test:coverage",
         "check:lint": "with-env 'biome lint'",
         "check:format": "with-env 'biome format'",
         "check": "bun run check:lint && bun run check:format",
