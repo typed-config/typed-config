@@ -1,5 +1,5 @@
 {
-    "name": "@typed-config-js/type-utils",
+    "name": "@typed-config-js/utils",
     "version": "0.0.1",
     "exports": {
         ".": "./src/index.ts"
